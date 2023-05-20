@@ -162,6 +162,25 @@
         </g>
     </svg>
 
+    <!-- Reusing objects: use and defs -->
+    <h2>Reusing Objects: Use and defs</h2>
+    <svg width="600" height="200">
+        <defs>
+            <rect id="black" x="0" y="0" width="20" height="20" fill="rgb(64,32,32)" />
+            <rect id="white" x="0" y="0" width="20" height="20" fill="rgb(255,225,200)" />
+        </defs>
+        <g transform="translate(10,10) scale(3)"> <!--Array positioning-->
+            <use xlink:href="#black" /> <!--(0, 0)-->
+            <use xlink:href="#white" transform="translate(20)" /> <!--(0, 1)-->
+            <use xlink:href="#white" transform="translate(0,20)" /> <!--(1, 0)-->
+            <use xlink:href="#black" transform="translate(20,20)" /> <!--(1, 1)-->
+            <use xlink:href="#black" transform="translate(40)" /> <!--(0, 2)-->
+            <use xlink:href="#white" transform="translate(40,20)" /> <!--(2, 2)-->
+            <use xlink:href="#black" transform="translate(0,40)" /> <!--(2, 0)-->
+            <use xlink:href="#white" transform="translate(20, 40)" /> <!--(2, 1)-->
+            <use xlink:href="#black" transform="translate(40,40)" /> <!--(2, 2)-->
+        </g>
+    </svg>
 
 </body>
 
